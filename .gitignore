@@ -361,3 +361,52 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# ============================================
+# 프로젝트별 추가 설정
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs (CLion, etc.)
+.idea/
+*.iml
+*.iws
+cmake-build-*/
+
+# MySQL DLL 파일 (외부 라이브러리에만 보관)
+lectures/**/libcrypto-3-x64.dll
+lectures/**/libssl-3-x64.dll
+lectures/**/mysqlcppconn-10-vs14.dll
+lectures/**/mysqlcppconnx-2-vs14.dll
+
+# 임시 파일
+*.swp
+*.swo
+*~
+.~lock.*
+
+# 컴파일된 실행 파일
+*.exe
+*.out
+*.app
+
+# Claude Code 설정
+.claude/
