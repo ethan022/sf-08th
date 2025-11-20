@@ -80,5 +80,8 @@ int main()
 		cout << "다운 캐스팅 실패" << endl;
 	}
 
+
+	//.\mysql - connector - c++ - 9.3.0 - winx64\include
+
 	return 0;
 }
