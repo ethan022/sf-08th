@@ -1,0 +1,17 @@
+-- 암시적 형변환
+SELECT '100' + '200';
+SELECT 100 + '200';
+-- 문자열 결합
+SELECT CONCAT('100', '200');
+SELECT CONCAT(100, '200');
+
+-- 명시적 형변환 : CAST, CONVERT
+SELECT CAST('123' AS SIGNED);
+SELECT CAST(3.14 AS CHAR);
+SELECT CAST("2025&4&3" AS DATE);
+
+
+
+
+
+
