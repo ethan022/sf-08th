@@ -48,6 +48,34 @@ int findMax(int a, int b, int c) {
     }
 }
 
+// 팩토리얼 계산
+int factorial(int n) {
+    // 기본 조건 (base case)
+    if (n <= 1) {
+        return 1;
+    }
+    // 재귀 함수 호출
+    return n * factorial(n - 1);
+}
+
+// 피보나치 수열
+int fibonacci(int n) {
+    // 기본 조건 (base case)
+    if (n <= 1) {
+        return n;
+    }
+    // 재귀 함수 호출
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// 거듭 제곱
+int power(int base, int exponent) {
+    if (exponent == 0) {
+        return 1;
+    }
+    return base * power(base, exponent - 1);
+}
+
 int main()
 {
     // 더하기 함수 호출
@@ -76,7 +104,51 @@ int main()
     int maxNum = findMax(10, 20, 30);
     cout << "최대값 : " << maxNum << endl;
 
+    // 팩토리얼 계산
+    int n;
+    cout << "정수를 입력하세요 : ";
+    cin >> n;
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
 
+    // 반복문 호출
+    cout << n << "! = " << result << endl;
+    // 재귀함수 호출
+    cout << "재귀함수 값 : " << n << "! = " << factorial(n) << endl;
+
+
+    // 피보나치 수열
+    int fibo;
+    cout << "피보나치 수열을 입력하세요 : ";
+    cin >> fibo;
+
+    // 피보나치 수열 호출 (반복문)
+    int fibo1 = 0, fibo2 = 1;
+    for (int i = 2; i <= fibo; i++) {
+        int next = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = next;
+    }
+    cout << "피보나치 수열 : " << fibo2 << endl;
+
+    // 피보나치 수열 호출 (재귀 함수)
+    cout << "피보나치 수열 : " << fibonacci(fibo) << endl;
+
+    //거듭 제곱
+    int base, exponent;
+    cout << "밑과 지수를 입력하세요 : ";
+    cin >> base >> exponent;
+
+    int result = 1;
+    for (int i = 0; i < exponent; i++) {
+        result *= base;
+    }
+    cout << "거듭 제곱 : " << result << endl;
+
+    // 재귀 함수 호출
+    cout << "재귀 함수 거듭 제곱 : " << power(base, exponent) << endl;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
